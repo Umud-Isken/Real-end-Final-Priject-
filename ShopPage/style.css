@@ -1,0 +1,329 @@
+/* Кнопки */
+.btns {
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btnyeni {
+    width: 200px;
+}
+
+#validationCustom01 {
+    width: 300px;
+    height: 35px;
+    padding: 10px;
+}
+
+/* Список групп */
+.list-group {
+    width: 318px; /* Adjust the width to your liking */
+    padding-right: 20px; 
+}
+/* Контейнер для списка и карточек */
+.List-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the container */
+    gap: 20px;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+.navber-table {
+    background-color: #343a40; /* Dark background for navbar */
+    padding: 15px;
+}
+
+.roo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+}
+
+.col img {
+    width: 80px; /* Increased logo size */
+    margin-right: 20px; /* Spacing around the logo */
+}
+
+.col a {
+    color: #ffffff; /* White text color for links */
+    margin: 0 15px; /* Spacing between links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold links */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.col a:hover {
+    color: #17a2b8; /* Change color on hover */
+}
+
+.form-control {
+    border: 1px solid #ced4da; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for input */
+    width: 200px; /* Fixed width for the input */
+}
+
+
+.fa-solid {
+    font-size: 1.2em; /* Icon size */
+}
+
+
+/* Контейнер для карточек */
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width:5px;
+    gap: 20px; /* Add spacing between cards */
+    flex-grow: 1; /* Allow this container to take up remaining space */
+}
+
+/* Карточка */
+.card2 {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px 0; 
+}
+
+.card2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card2 p {
+    margin: 5px 0;
+}
+
+.imgModal{
+    width: 200px;
+}
+
+.etrafliModal{
+    width: 500px;
+}
+li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+   ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+   }
+
+
+  .modal-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+  }
+
+
+
+  .imgModal {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .modal-header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+  }
+  #btn{
+    display: flex;
+    justify-content: space-between;
+    width: 310px;
+  }
+
+.labels-group{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+/* 
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.List-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.card-grid {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card2 {
+    width: 200px; /* Set card width */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Animation for hover effect */
+    padding: 15px; /* Internal padding to ensure content fits */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space between elements */
+}
+.card2:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.card2 img {
+    border-radius: 10px 10px 0 0; /* Rounded corners for the image */
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* .btn {
+    border-radius: 5px;
+} */
+
+/* button {
+    background-color: #17a2b8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #138496;
+}
+
+/* Modal styling */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgModal {
+    max-width: 100%;
+    height: auto;
+}
+
+.labels-group {
+    display: flex;
+    flex-direction: column;
+} 
+
+.main-cont {
+    background-color: #f8f9fa; /* светлый фон */
+    padding: 15px 30px; /* отступы */
+    border-radius: 10px; /* скругленные углы */
+    display: flex; /* флекс-контейнер */
+    align-items: center; /* выравнивание по центру по вертикали */
+    justify-content: space-between; /* распределение элементов */
+}
+
+
+
+.input-group {
+    position: relative; /* для кнопки */
+}
+
+.input-group .form-control {
+    border: 1px solid #007bff; /* рамка поля ввода */
+    border-radius: 5px; /* скругление углов поля ввода */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* легкая тень */
+}
+
+.input-group .btn2 {
+    border-radius: 5px; /* скругление углов кнопки */
+}
+
+.secnd .btn2 {
+    margin-left: 10px; /* отступ между кнопками */
+    transition: background-color 0.3s; /* плавный переход */
+}
+
+.secnd .btn2:hover {
+    background-color: #0056b3; /* темный фон при наведении */
+    color: black;
+}
+.btn2 {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); /* градиент для кнопок */
+    color: white; /* цвет текста */
+    border: none; /* без рамки */
+    padding: 10px 15px; /* отступы */
+    border-radius: 5px; /* скругленные углы */
+    transition: background 0.3s, transform 0.2s; /* плавные переходы */
+}
+
+.btn2-secondary {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%); /* градиент для вторичной кнопки */
+}
+
+.btn2-success {
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%); /* градиент для кнопки успеха */
+}
+
+.btn2:hover {
+    transform: translateY(-2px); /* подъем кнопки при наведении */
+}
+
+.btn2:active {
+    transform: translateY(0); /* возвращение на место при нажатии */
+}
+
+/* document.querySelectorAll(".BaskterBtn").forEach((btn, index) => {
+    btn.addEventListener('click', function() {
+        let demo = btn.parentElement;
+        window.location.href = "./index.html"
+
+        let basktetObj = {
+            imageOfbasket: demo.querySelector("img").src,
+            priceOfComp: demo.querySelector("p:nth-of-type(3)").textContent.split(": ")[1],
+            kategoryOFcomp: demo.querySelector("p:first-of-type").textContent.split(": ")[1]
+        };
+
+        addedItemsToBasket.push(basktetObj);
+        localStorage.setItem("basket", JSON.stringify(addedItemsToBasket));
+        console.log(addedItemsToBasket); // Optional: Log the basket to check
+
+        // Update the badge count
+        alert("Computer Added To Basket")
+        updateBasketBadge();
+    });
+});
+
+// Example of how to handle the removal from the basket
+function removeItem(index) {
+    addedItemsToBasket.splice(index, 1); // Remove item from array
+    localStorage.setItem("basket", JSON.stringify(addedItemsToBasket)); // Update local storage
+    displayBasketItems(); // Refresh the displayed items
+
+    // Update the badge count
+    updateBasketBadge();
+} */

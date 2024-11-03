@@ -1,0 +1,37 @@
+
+.btns{
+    height: 35px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+/* Style for the carousel */
+.carousel-inner img {
+    object-fit:contain; /* Ensures images cover the container */
+    width: 500px;
+    height: 500px; /* Set a fixed height for the carousel images */
+}
+
+.carousel-caption {
+    padding: 10px; /* Padding for caption text */
+    border-radius: 5px; /* Rounded corners for caption background */
+    color: black;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    margin: 20px;
+    background-color: sienna;
+    border: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Background color for the icons */
+    border-radius: 50%; /* Circular background for better visibility */
+    padding: 10px; /* Space around the icons */
+    color: black;
+}

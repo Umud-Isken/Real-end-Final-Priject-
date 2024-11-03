@@ -1,0 +1,59 @@
+body {
+    background-color: grey;
+  }
+  .main-container {
+    background-color: white;
+    height: 80vh;
+    width: 85%;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  .navbar h2 {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  .quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+  }
+  .btn-light {
+    min-width: 30px;
+  }
+  .qu-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding inside the container */
+    width: 100px; /* Fixed width */
+    justify-content: space-between; /* Space between buttons and quantity */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.btn-light {
+    background-color: #f0f0f0; /* Light button color */
+    color: #333; /* Dark text color */
+}
+
+.btn:hover {
+    opacity: 0.9; /* Slightly darker on hover */
+}
+
+.quantity {
+    font-weight: bold; /* Bold quantity text */
+    margin: 0 10px; /* Space around quantity text */
+}
+.ccc{
+  position: absolute;
+  right: 650px;
+  margin-top: 15px;
+}

@@ -1,0 +1,60 @@
+
+.loginBtn2{
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.pad{
+    margin-right: 265px;
+}
+.pad2{
+    margin-right: 245px;
+}
+.pad3{
+    margin-right: 240px;
+}
+.pad4{
+    margin-right: 260px;
+}
+input{
+    width: 300px;
+}
+body{
+    width: 100vh;
+}
+.container{
+    margin-right: 100px;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+  }
+  body {
+    background-image: url('https://img.freepik.com/premium-photo/grainy-gradient-background-red-white-blue-colors-with-soft-faded-watercolor-border-texture_927344-24167.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the background covers the whole viewport */
+    margin: 0; /* Removes default body margin */
+    color: white; /* Sets text color to white for contrast */
+    font-family: Arial, sans-serif; /* Sets a default font */
+}
+.content {
+    max-width: 800px; /* Limits the width of the content */
+    margin: auto; /* Centers the content */
+    padding: 20px; /* Adds padding around the content */
+    background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background for readability */
+    border-radius: 10px; /* Rounds the corners */
+}
+.container{
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 20px;
+    margin: 10px;
+    opacity: 0.8;
+}
