@@ -1,5 +1,6 @@
 let addComputer = document.getElementById("addComputer");
 let table = document.querySelector(".tableBody");
+let priceSort = document.getElementById("priceSort");
 
 addComputer.addEventListener("click", function () {
     let newItem = {
@@ -25,6 +26,8 @@ addComputer.addEventListener("click", function () {
     if (modal) {
         modal.hide();
     }
+
+    window.location.href = "./index.html";
 });
 
 function saveComputer(computer) {
@@ -40,7 +43,7 @@ function loadComputers() {
 
 function addTableRow(computer, index) {
     let newItem = `
-        <tr data-index="${index}">
+        <tr class="ththt" data-index="${index}">
             <th scope="col">${index + 1}</th>
             <th scope="col"><p class="nameOfcomp">${computer.category}</p></th>
             <th class="d-none" scope="col"><p class="kateqoryOfrow">${computer.name}</p></th>
@@ -55,7 +58,7 @@ function addTableRow(computer, index) {
             <th class="d-none" scope="col"><p class="videoCardOfRow">${computer.videoCard}</p></th>
             <th scope="col"><p class="priceOfcomp" style="color: red">${computer.price}</p></th>
             <th scope="col">
-                <button class="btn btn-danger removeBtn">Sil</button>
+                <button class="btn btn-danger btns22 removeBtn">Sil</button>
                 <button class="btn btn-primary btns2" data-bs-toggle="modal" data-bs-target="#exampleModal2">Redakt Ele</button>
             </th>
         </tr>
@@ -84,11 +87,9 @@ function clearInputFields() {
 
 function removeComputer(index) {
     let computers = JSON.parse(localStorage.getItem("computers")) || [];
-    if (confirm("Do you sure remove computer?")) {
-        computers.splice(index, 1);
-        localStorage.setItem("computers", JSON.stringify(computers));
-        loadComputers(); // Refresh the table
-    }
+    confirm("Do you sure remove computer?");
+    computers.splice(index, 1);
+    localStorage.setItem("computers", JSON.stringify(computers));
 }
 
 loadComputers();
@@ -98,7 +99,8 @@ table.addEventListener("click", function (e) {
         let row = e.target.closest("tr");
         let index = row.dataset.index;
         removeComputer(index);
-        row.remove(); // This line is not necessary since loadComputers will refresh the table
+        row.remove();
+        window.location.href = "./index.html";
     }
 
     if (e.target.classList.contains("tableImage")) {
@@ -110,7 +112,7 @@ table.addEventListener("click", function (e) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body d-flex align-items-center justify-content-center">
-                        <img style="width: 100%" src="${imageSrc}" alt="Picture not available">
+                        <img style="width: 100%" src="${imageSrc}" alt="Picture is not the download">
                     </div>
                 </div>
             </div>
@@ -120,24 +122,17 @@ table.addEventListener("click", function (e) {
     }
 });
 
-// Image preview
 document.getElementById("image").addEventListener("input", function () {
     let imageSrc = this.value;
-    let imagePreview = document.getElementById("imagePreview");
-    imagePreview.src = imageSrc;
-
-    // Check if image loads correctly
-    imagePreview.onerror = () => imagePreview.src = ''; // Reset if image fails to load
-    imagePreview.style.width = "200px";
+    document.getElementById("imagePreview").src = imageSrc;
+    document.getElementById("imagePreview").style.width = "200px";
 });
 
-// Clear fields
 document.getElementById("btn").addEventListener("click", function () {
     clearInputFields();
     document.getElementById("imagePreview").src = '';
 });
 
-// Edit functionality
 document.querySelectorAll(".btns2").forEach(editbtn => {
     editbtn.addEventListener('click', function() {
         let tr = this.closest("tr");
@@ -164,7 +159,6 @@ document.querySelectorAll(".btns2").forEach(editbtn => {
     });
 });
 
-// Save changes
 document.querySelector(".saveChangesBtn").addEventListener('click', function() {
     let editingIndex = parseInt(this.getAttribute("data-editing-index"));
     let updatedComputer = {
@@ -186,11 +180,11 @@ document.querySelector(".saveChangesBtn").addEventListener('click', function() {
     if (editingIndex >= 0 && editingIndex < computers.length) {
         computers[editingIndex] = updatedComputer;
         localStorage.setItem("computers", JSON.stringify(computers));
-        loadComputers(); // Refresh the table
     }
+
+    window.location.href = "./index.html";
 });
 
-// Clear edit fields
 document.querySelector(".btnbtntb").addEventListener("click", clearEditFields);
 
 function clearEditFields() {
@@ -209,22 +203,24 @@ function clearEditFields() {
     document.getElementById("videoCardEdit").value = '';
 }
 
-// Search functionality
 document.querySelector(".btnbt").addEventListener("click", function () {
     let searchInput = document.querySelector(".SearchInp").value.toLowerCase();
     let computers = JSON.parse(localStorage.getItem("computers")) || [];
     
     let filtered = computers.filter((computer) => {
-        return computer.category.toLowerCase().includes(searchInput) || computer.name.toLowerCase().includes(searchInput);
+        return computer.category.toLowerCase().includes(searchInput);
     });
 
-    table.innerHTML = ""; 
-
     if (filtered.length === 0) {
-        table.innerHTML = `<tr><td colspan="6" style="text-align:center;">No computers found</td></tr>`;
-    } else {
-        filtered.forEach((item, index) => addTableRow(item, index));
+        document.querySelector(".tableBody").innerHTML = `<tr><p  style="width:200px; position:absolute;left:650px;top:270px;color:black;" class="ccc " colspan="6">No computers found</p></tr>`;
+        return;
     }
 
+    table.innerHTML = "";
+    filtered.forEach((item, index) => addTableRow(item, index));
+    
     document.querySelector(".SearchInp").value = "";
 });
+
+
+//h1h1hhh1
